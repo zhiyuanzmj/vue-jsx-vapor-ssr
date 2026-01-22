@@ -1,29 +1,28 @@
 {
-  "name": "vue-jsx-ssr",
+  "name": "vue-jsx-vapor-ssr",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node server",
+    "dev": "SSR=true node server",
     "build": "npm run build:client && npm run build:server",
-    "build:client": "vite build --outDir dist/client",
+    "build:client": "vite build --outDir dist/client --ssrManifest",
     "build:server": "vite build --ssr src/entry-server.ts --outDir dist/server",
-    "preview": "cross-env NODE_ENV=production node server",
-    "check": "vue-tsc"
+    "preview": "NODE_ENV=production node server",
+    "check": "tsmc"
   },
   "dependencies": {
-    "compression": "^1.8.0",
-    "express": "^5.0.1",
-    "sirv": "^3.0.1",
-    "vue": "^3.5.13"
+    "compression": "^1.8.1",
+    "express": "^5.2.1",
+    "sirv": "^3.0.2",
+    "vue": "3.6.0-beta.3",
+    "vue-jsx-vapor": "^3.1.13"
   },
   "devDependencies": {
-    "@types/express": "^5.0.0",
-    "@types/node": "^22.13.4",
-    "@vitejs/plugin-vue": "^5.2.1",
-    "cross-env": "^7.0.3",
+    "@ts-macro/tsc": "^0.3.7",
+    "@types/express": "^5.0.6",
+    "@types/node": "^22.19.7",
     "typescript": "~5.7.3",
-    "vite": "^6.1.1",
-    "vue-tsc": "^2.2.2"
+    "vite": "8.0.0-beta.5"
   }
 }
