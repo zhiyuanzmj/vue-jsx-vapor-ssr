@@ -12,8 +12,7 @@ export default defineVaporComponent((props: { msg: string }) => {
           count is {count.value}
         </button>
         <p>
-          Edit
-          <code>components/HelloWorld.vue</code> to test HMR
+          Edit <code>components/HelloWorld.vue</code> to test HMR
         </p>
       </div>
 
