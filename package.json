@@ -16,7 +16,7 @@
     "express": "^5.2.1",
     "sirv": "^3.0.2",
     "vue": "3.6.0-beta.3",
-    "vue-jsx-vapor": "^3.1.13"
+    "vue-jsx-vapor": "^3.1.22"
   },
   "devDependencies": {
     "@ts-macro/tsc": "^0.3.7",

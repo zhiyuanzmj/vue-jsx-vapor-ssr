@@ -3,7 +3,7 @@ import { createApp } from './main'
 import { basename } from 'node:path'
 
 export async function render(_url: string, manifest: Record<string, string[]>) {
-  const { app } = createApp()
+  const { app } = createApp(true)
 
   // passing SSR context object which will be available via useSSRContext()
   // vue-jsx-vapor injects code into a component's setup() that registers
